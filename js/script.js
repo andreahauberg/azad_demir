@@ -32,11 +32,15 @@ window.addEventListener("load", function () {
   }
 });
 
-// Autoplay videos on user gesture (e.g., a tap)
-document.addEventListener("click", function () {
+// Autoplay videos when page is scrolled
+window.addEventListener("scroll", function () {
   for (var i = 0; i < videos.length; i++) {
-    playVideo(videos[i]);
+    var video = videos[i];
+    var videoPosition = video.getBoundingClientRect().top;
+    var windowPosition = window.innerHeight;
+
+    if (videoPosition - windowPosition <= 0) {
+      playVideo(video);
+    }
   }
-  // Remove click listener to prevent multiple plays on single click
-  document.removeEventListener("click", this);
 });
