@@ -73,11 +73,11 @@ header {
 
   .background-image {
     position: absolute;
-    top: 0;
+    top: 2.5em;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../img/jewls/all_at_once.png);
+    background-image: url(../img/jewls/small_stick2.png);
     background-size: cover;
     background-position: center;
     z-index: -1;
