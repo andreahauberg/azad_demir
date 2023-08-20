@@ -51,11 +51,11 @@
 
     .background-image2 {
     position: absolute;
-    top: 5em;
+    top: 0;
     left: 0;
-    bottom: 5em;
+    bottom: 10em;
     width: 100%;
-    height: 100%;
+    height: 110%;
     background-image: url(../img/jewls/gem_ring4.png);
     background-size: cover;
     background-position: center;
