@@ -45,7 +45,7 @@ function playVideo(video) {
         })
         .catch(function(error) {
           // Autoplay was prevented
-          // You might want to show a play button or other controls
+          video.controls = true; // Show video controls
         });
     }
   }
