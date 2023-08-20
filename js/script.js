@@ -13,9 +13,9 @@ document.querySelectorAll(".nav_link").forEach(n => n.addEventListener("click", 
   navMenu.classList.remove("active");
 }))
 
-var video = document.querySelector("backgroundVideo");
+var videos = document.getElementsByClassName("backgroundVideo");
 
-function playVideo() {
+function playVideo(video) {
   video.play()
     .then(function() {
       // Video started playing
@@ -25,14 +25,18 @@ function playVideo() {
     });
 }
 
-// Autoplay video once everything is loaded
+// Autoplay videos once everything is loaded
 window.addEventListener("load", function () {
-  playVideo();
+  for (var i = 0; i < videos.length; i++) {
+    playVideo(videos[i]);
+  }
 });
 
-// Autoplay video on user gesture (e.g., a tap)
+// Autoplay videos on user gesture (e.g., a tap)
 document.addEventListener("click", function () {
-  playVideo();
+  for (var i = 0; i < videos.length; i++) {
+    playVideo(videos[i]);
+  }
   // Remove click listener to prevent multiple plays on single click
   document.removeEventListener("click", this);
 });
