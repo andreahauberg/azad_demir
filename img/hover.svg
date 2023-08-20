@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="56" height="27" viewBox="0 0 56 27">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2b3189;
+        font-family: ArialMT, Arial;
+        font-size: 22px;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(.33 19.37)"><tspan x="0" y="0">hover</tspan></text>
+</svg>
