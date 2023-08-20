@@ -12,3 +12,8 @@ document.querySelectorAll(".nav_link").forEach(n => n.addEventListener("click", 
   hamburger.classList.remove("active");
   navMenu.classList.remove("active");
 }))
+
+document.addEventListener("DOMContentLoaded", function () {
+  var video = document.getElementById("backgroundVideo");
+  video.play();
+});
