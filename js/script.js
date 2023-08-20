@@ -16,13 +16,20 @@ document.querySelectorAll(".nav_link").forEach(n => n.addEventListener("click", 
 var videos = document.getElementsByClassName("backgroundVideo");
 
 function playVideo(video) {
-  video.play()
-    .then(function() {
-      // Video started playing
-    })
-    .catch(function(error) {
-      // Video playback was prevented
-    });
+  if (video.paused) {
+    var playPromise = video.play();
+
+    if (playPromise !== undefined) {
+      playPromise
+        .then(function() {
+          // Video started playing
+        })
+        .catch(function(error) {
+          // Autoplay was prevented
+          // You might want to show a play button or other controls
+        });
+    }
+  }
 }
 
 // Autoplay videos once everything is loaded
@@ -32,7 +39,7 @@ window.addEventListener("load", function () {
   }
 });
 
-// Autoplay videos when page is scrolled
+// Autoplay videos when they become visible in the viewport
 window.addEventListener("scroll", function () {
   for (var i = 0; i < videos.length; i++) {
     var video = videos[i];
@@ -44,3 +51,10 @@ window.addEventListener("scroll", function () {
     }
   }
 });
+
+// Autoplay videos when they are interacted with (tap/click) on mobile devices
+for (var i = 0; i < videos.length; i++) {
+  videos[i].addEventListener("click", function() {
+    playVideo(this);
+  });
+}
