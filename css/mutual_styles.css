@@ -106,7 +106,8 @@ li {
   .under_li_nav:hover,
   .under_li:hover,
   .content_link:hover,
-  .local_link:hover{
+  .local_link:hover,
+  .enquiries_item:hover{
     color: var(--link-color);
     transition: 0.7s ease;
   }
