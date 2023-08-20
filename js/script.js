@@ -13,7 +13,7 @@ document.querySelectorAll(".nav_link").forEach(n => n.addEventListener("click", 
   navMenu.classList.remove("active");
 }))
 
-var video = document.getElementById("backgroundVideo");
+var video = document.querySelector("backgroundVideo");
 
 function playVideo() {
   video.play()
