@@ -6,10 +6,10 @@ function playVideo(video) {
 
     if (playPromise !== undefined) {
       playPromise
-        .then(function() {
+        .then(function () {
           // Video started playing
         })
-        .catch(function(error) {
+        .catch(function (error) {
           // Autoplay was prevented
           // You might want to show a play button or other controls
         });
@@ -39,7 +39,7 @@ window.addEventListener("scroll", function () {
 
 // Autoplay videos when they are interacted with (tap/click) on mobile devices
 for (var i = 0; i < videos.length; i++) {
-  videos[i].addEventListener("click", function() {
+  videos[i].addEventListener("click", function () {
     playVideo(this);
   });
 }

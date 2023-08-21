@@ -1,37 +1,38 @@
 @keyframes fadein {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
 
 /* press.css */
 
 main img {
-    width: 1500px;
-    position: absolute;
-    transform: translate(-50px, -50px) scale(0.5) rotate(10deg);
-    animation: fadein 0.5s;
-  }
+  width: 1500px;
+  position: absolute;
+  transform: translate(-50px, -50px) scale(0.5) rotate(10deg);
+  animation: fadein 0.5s;
+}
 
-  main {
-    cursor: url(../img/click1.svg) 42 26 , auto ;
-  }
+main {
+  cursor: url(../img/click1.svg) 42 26, auto;
+}
 
-
-  
-  header img,
-  header #head_logo img,
-  header .nav_menu img,
-  header .hamburger span {
-    /* Tilpas reglerne efter behov */
-    pointer-events: none;
-  }
-
+header img,
+header #head_logo img,
+header .nav_menu img,
+header .hamburger span {
+  /* Tilpas reglerne efter behov */
+  pointer-events: none;
+}
 
 .credits {
-    text-align: center;
-    color: var(--head-color);
-    font-size: large;
-    font-variant: small-caps;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+  color: var(--head-color);
+  font-size: large;
+  font-variant: small-caps;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
